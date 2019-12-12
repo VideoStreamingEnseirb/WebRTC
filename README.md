@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Installer la dernière version de nodejs : https://nodejs.org/fr/download/
 
 ## Lancer l'application : 
-`npm install`
+`npm install`.
 `npm start`
 
 
