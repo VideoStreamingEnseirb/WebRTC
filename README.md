@@ -3,11 +3,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Install React
 Installer la dernière version de nodejs : https://nodejs.org/fr/download/
 
-commande :
+## Lancer l'application : 
+`npm install`
+`npm start`
 
-npm install -g npm
 
-npm install -g create-react-app
+## Commande :
+
+#npm install -g npm
+
+#npm install -g create-react-app
 
 lancer react : npm start
 
