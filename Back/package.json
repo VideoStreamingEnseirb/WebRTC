@@ -1,0 +1,26 @@
+{
+  "name": "webrtcpeer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VideoStreamingEnseirb/WebRTC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VideoStreamingEnseirb/WebRTC/issues"
+  },
+  "homepage": "https://github.com/VideoStreamingEnseirb/WebRTC#readme",
+  "dependencies": {
+    "node-static": "^0.7.11",
+    "signalhub": "^4.9.0",
+    "simple-peer": "^9.6.2",
+    "socket.io": "^2.3.0",
+    "webrtc-swarm": "^2.9.0"
+  }
+}
