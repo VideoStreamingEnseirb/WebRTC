@@ -13,8 +13,8 @@ class demo extends React.Component {
         localStream: null,
         clientID: new Date().getTime() % 1000,
         username: faker.internet.userName(),
-        userList: [], 
-        targetUsername : null
+        userList: [],
+        targetUsername: null
     };
 
     localVideoRef = React.createRef();
@@ -64,7 +64,7 @@ class demo extends React.Component {
                 });
                 console.log(
                     `Your username has been set to <${
-                        msg.name
+                    msg.name
                     }> because the name you chose is in use`
                 );
                 break;
@@ -130,11 +130,11 @@ class demo extends React.Component {
     call = (user) => {
         this.setState({
             targetUsername: user
-        }, function() {
+        }, function () {
             console.log("USERNAME3 : " + this.state.targetUsername)
             this.createPeerConnection();
         });
-        
+
     };
 
     hangUp = () => {
@@ -162,7 +162,7 @@ class demo extends React.Component {
 
         //GROS PROBLEME NE SET PAS LE TARGET USERNAME
 
-        
+
     };
 
     closeVideoCall = () => {
@@ -188,59 +188,68 @@ class demo extends React.Component {
         } = this.state;
 
         return (
-            <div>
-                <div>
-                    Username:{" "}
-                    <input
-                        type="text"
-                        value={username}
-                        onChange={this.changeUsername}
-                    />
-                    <button onClick={this.setUsername}> Set Username </button>
-                </div>
-                <video
-                    ref={this.localVideoRef}
-                    autoPlay
-                    muted
-                    style={{
-                        width: "240px",
-                        height: "180px"
-                    }}
-                />
-                <video
-                    ref={this.remoteVideoRef}
-                    autoPlay
-                    muted
-                    style={{
-                        width: "240px",
-                        height: "180px"
-                    }}
-                />
-                <div>
-                    <button onClick={this.initMedia} disabled={startDisabled}>
-                        Init Media
+            <div className="card">
+                <div className="card-header">
+                    Demonstration
+        </div>
+                <div className="card-body">
+                    <div className="container-fluid center">
+                        <div>
+                            <div>
+                                Username:{" "}
+                                <input
+                                    type="text"
+                                    value={username}
+                                    onChange={this.changeUsername}
+                                />
+                                <button onClick={this.setUsername}> Set Username </button>
+                            </div>
+                            <video
+                                ref={this.localVideoRef}
+                                autoPlay
+                                muted
+                                style={{
+                                    width: "240px",
+                                    height: "180px"
+                                }}
+                            />
+                            <video
+                                ref={this.remoteVideoRef}
+                                autoPlay
+                                muted
+                                style={{
+                                    width: "240px",
+                                    height: "180px"
+                                }}
+                            />
+                            <div>
+                                <button onClick={this.initMedia} disabled={startDisabled}>
+                                    Init Media
                     </button>
-                    <button onClick={this.hangUp} disabled={hangUpDisabled}>
-                        Hang Up
+                                <button onClick={this.hangUp} disabled={hangUpDisabled}>
+                                    Hang Up
                     </button>
-                </div>
-                <div>
-                    <ul>
-                        {userList.map(user => (
-                            <li key={user}>
-                                {user}
-                                {"  "}
-                                {user !== username ? (
-                                    <button
-                                        onClick={() => this.call(user)}
-                                        disabled={callDisabled}
-                                    >
-                                        Call
+                            </div>
+                            <div>
+                                <ul>
+                                    {userList.map(user => (
+                                        <li key={user}>
+                                            {user}
+                                            {"  "}
+                                            {user !== username ? (
+                                                <button
+                                                    onClick={() => this.call(user)}
+                                                    disabled={callDisabled}
+                                                >
+                                                    Call
                                     </button>
-                                ) : null}
-                            </li>
-                        ))}
-                    </ul>
+                                            ) : null}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
