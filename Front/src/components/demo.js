@@ -7,6 +7,7 @@ import PeerConnection from "./PeerConnection";
 class demo extends React.Component {
     state = {
         startDisabled: true,
+        targetUsername: '',
         callDisabled: true,
         hangUpDisabled: true,
         localStream: null,
@@ -84,6 +85,7 @@ class demo extends React.Component {
     };
 
     gotStream = stream => {
+        console.log("YEEESSS");
         this.localVideoRef.current.srcObject = stream;
         this.setState({
             callDisabled: false,
@@ -91,6 +93,7 @@ class demo extends React.Component {
         });
     };
     gotRemoteTrack = event => {
+        console.log("YEEESSS");
         let remoteVideo = this.remoteVideoRef.current;
 
         if (remoteVideo.srcObject !== event.streams[0]) {
@@ -102,6 +105,7 @@ class demo extends React.Component {
         });
     };
     gotRemoteStream = event => {
+        console.log("YEEESSS");
         this.remoteVideoRef.current.srcObject = event.stream;
         this.setState({
             hangUpDisabled: false
@@ -121,15 +125,18 @@ class demo extends React.Component {
             .catch(e => alert("getUserMedia() error:" + e.name));
     };
 
-    call = user => {
+    call = (user) => {
         this.setState({
             targetUsername: user
+        }, function() {
+            console.log("USERNAME3 : " + this.state.targetUsername)
+            this.createPeerConnection();
         });
-        console.log("USERNAME3 : " + user)
-        this.createPeerConnection();
+        
     };
 
     hangUp = () => {
+        console.log("YEEESSS");
         this.signalingConnection.sendToServer({
             name: this.state.username,
             target: this.state.targetUsername,
@@ -140,7 +147,7 @@ class demo extends React.Component {
 
     createPeerConnection = () => {
         if (this.peerConnection) return;
-
+        console.log("USER4 : " + this.state.targetUsername)
         this.peerConnection = new PeerConnection({
             gotRemoteStream: this.gotRemoteStream,
             gotRemoteTrack: this.gotRemoteTrack,
@@ -148,13 +155,12 @@ class demo extends React.Component {
             onClose: this.closeVideoCall,
             localStream: this.state.localStream,
             username: this.state.username,
-            //targetUsername: this.state.targetUsername
-            targetUsername: "OK"
+            targetUsername: this.state.targetUsername
         });
 
         //GROS PROBLEME NE SET PAS LE TARGET USERNAME
 
-        console.log("USER4 : " + this.state.targetUsername)
+        
     };
 
     closeVideoCall = () => {

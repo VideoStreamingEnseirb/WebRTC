@@ -133,6 +133,7 @@ class PeerConnection {
             .setRemoteDescription(new RTCSessionDescription(sdp))
             .then(() => this.peerConnection.createAnswer())
             .then(answer => {
+                console.log("yikes");
                 return this.peerConnection.setLocalDescription(answer);
             })
             .then(() => {
