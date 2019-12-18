@@ -48,6 +48,7 @@ class demo extends React.Component {
     }
 
     onSignalingMessage = msg => {
+        console.log(msg);
         switch (msg.type) {
             case "id":
                 this.setState({
@@ -77,9 +78,9 @@ class demo extends React.Component {
             // // signaling information during negotiations leading up to a video
             // // call.
 
-            case "video-offer": // Invitation and offer to chat
+            case "connection-offer": // Invitation and offer to chat
                 this.createPeerConnection();
-                this.peerConnection.videoOffer(msg);
+                this.peerConnection.connectionOffer(msg);
                 break;
         }
     };
