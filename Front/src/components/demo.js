@@ -13,7 +13,8 @@ class demo extends React.Component {
         localStream: null,
         clientID: new Date().getTime() % 1000,
         username: faker.internet.userName(),
-        userList: []
+        userList: [], 
+        targetUsername : null
     };
 
     localVideoRef = React.createRef();
