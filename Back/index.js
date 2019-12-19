@@ -30,7 +30,12 @@ var http = require('http');
 var https = require('https');
 var url = require('url');
 var fs = require('fs');
+var request = require('request');
 var WebSocketServer = require('websocket').server;
+
+
+const express = require('express')
+const app = express()
 
 // Used for managing the text chat user list.
 
@@ -38,12 +43,31 @@ var connectionArray = [];
 var nextID = Date.now();
 var appendToMakeUnique = 1;
 
-// Output logging information to console
+var logs = "<br>";
+
+
+app.listen(4000, function (req, res) {
+    console.log('Example app listening on port 3000!')
+})
+
+
+app.get('/', function (req, res) {
+    res.send(logs);
+})
+
+
+
 
 function log(text) {
     var time = new Date();
-
+    logs = logs + "</br><br>" + "[" + time.toLocaleTimeString() + "] " + text
     console.log("[" + time.toLocaleTimeString() + "] " + text);
+
+    request('http://localhost:4000/', { json: true }, (err, res, body) => {
+        if (err) { return console.log(err); }
+    });
+
+
 }
 
 // If you want to implement support for blocking specific origins, this is
@@ -233,7 +257,7 @@ wsServer.on('request', function (request) {
                     msg.text = msg.text.replace(/(<([^>]+)>)/ig, "");
                     break;
 
-                    // Username change
+                // Username change
                 case "username":
                     var nameChanged = false;
                     var origName = msg.name;

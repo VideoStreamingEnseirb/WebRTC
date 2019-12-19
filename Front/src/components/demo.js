@@ -13,8 +13,7 @@ class demo extends React.Component {
         localStream: null,
         clientID: new Date().getTime() % 1000,
         username: faker.internet.userName(),
-        userList: [],
-        targetUsername: null
+        userList: []
     };
 
     localVideoRef = React.createRef();
@@ -108,6 +107,7 @@ class demo extends React.Component {
     };
     gotRemoteStream = event => {
         console.log("YEEESSS");
+
         this.remoteVideoRef.current.srcObject = event.stream;
         this.setState({
             hangUpDisabled: false

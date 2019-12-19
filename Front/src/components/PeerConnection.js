@@ -16,6 +16,7 @@ class PeerConnection {
         this.targetUsername = targetUsername;
         this.dataChannelLabel = dataChannelLabel;
 
+
         this.peerConnection = new RTCPeerConnection({
             iceServers: [
                 {
@@ -35,7 +36,6 @@ class PeerConnection {
         if (this.localStream) {
             this.peerConnection.addStream(this.localStream);
         }
-
 
 
         if (this.dataChannelLabel) {
@@ -102,7 +102,7 @@ class PeerConnection {
             .createOffer()
             .then(offer => {
                 console.log("attempting local description", offer);
-                console.log("state", this.peerConnection.signalingState);
+                console.log("Signaling state >>>>>", this.peerConnection.signalingState);
 
                 return this.peerConnection.setLocalDescription(offer);
             })
