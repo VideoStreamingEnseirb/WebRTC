@@ -63,7 +63,7 @@ function log(text) {
     logs = logs + "</br><br>" + "[" + time.toLocaleTimeString() + "] " + text
     console.log("[" + time.toLocaleTimeString() + "] " + text);
 
-    request('http://localhost:4000/', { json: true }, (err, res, body) => {
+    request('http://192.168.0.16:4000/', { json: true }, (err, res, body) => {
         if (err) { return console.log(err); }
     });
 
@@ -162,9 +162,9 @@ function sendUserListToAll() {
 // server.
 
 // var httpsOptions = {
-//     key: fs.readFileSync("./ssl/host.key"),
-//     cert: fs.readFileSync("./ssl/host.cert")
-// };
+//     key: fs.readFileSync("./localhost.key"),
+//     cert: fs.readFileSync("./localhost.crt")
+//  };
 
 // Our HTTPS server does nothing but service WebSocket
 // connections, so every request just returns 404. Real Web
@@ -172,10 +172,10 @@ function sendUserListToAll() {
 // want to, you can return real HTML here and serve Web content.
 
 // var httpsServer = https.createServer(httpsOptions, function (request, response) {
-//     log("Received secure request for " + request.url);
-//     response.write("Hello world");
-//     response.end();
-// });
+//      log("Received secure request for " + request.url);
+//      response.write("Hello world");
+//      response.end();
+//  });
 
 var httpsServer = http.createServer(function (request, response) {
     log("Received secure request for " + request.url);

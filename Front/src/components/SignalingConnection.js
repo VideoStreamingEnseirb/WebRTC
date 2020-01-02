@@ -20,9 +20,11 @@ class SignalingConnection {
     };
 
     connectToSocket = () => {
-        let serverUrl = `ws://${this.socketURL}`;
+        let serverUrl = `wss://${this.socketURL}`;
 
+        console.log("URL du serveur : " + serverUrl)
         this.connection = new WebSocket(serverUrl, "json");
+
         this.connection.onopen = () => this.onOpen()
 
         this.connection.onmessage = event => {
