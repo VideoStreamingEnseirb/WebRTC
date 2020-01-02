@@ -32,10 +32,11 @@ var url = require('url');
 var fs = require('fs');
 var request = require('request');
 var WebSocketServer = require('websocket').server;
-
-
+var axios = require('axios');
+var path = require('path');
 const express = require('express')
 const app = express()
+var cors = require('cors')
 
 // Used for managing the text chat user list.
 
@@ -44,23 +45,36 @@ var nextID = Date.now();
 var appendToMakeUnique = 1;
 
 var logs = "<br>";
-
-
+app.use(cors({credentials: true}));
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type', 'Access-Control-Allow-Origin', 'Origin');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+  });
 app.listen(4000, function (req, res) {
     console.log('Example app listening on port 3000!')
 })
 
 
 app.get('/', function (req, res) {
-    res.send(logs);
+    // res.send(logs);
+    fs.readFile('./logs.txt', 'utf8', function(err, contents) {
+        res.send(contents);
+    });
 })
-
-
 
 
 function log(text) {
     var time = new Date();
-    logs = logs + "</br><br>" + "[" + time.toLocaleTimeString() + "] " + text
+    // logs = logs + "</br><br>" + "[" + time.toLocaleTimeString() + "] " + text
+    logs ="</br><br>" + "[" + time.toLocaleTimeString() + "] " + text;
+    fs.appendFile("./logs.txt", logs+'\n', function(err) {
+        if(err) {
+            return console.log(err);
+        }
+    });
     console.log("[" + time.toLocaleTimeString() + "] " + text);
 
     request('http://localhost:4000/', { json: true }, (err, res, body) => {

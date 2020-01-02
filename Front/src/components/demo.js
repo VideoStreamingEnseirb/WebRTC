@@ -3,7 +3,9 @@ import "webrtc-adapter";
 import faker from "faker";
 import SignalingConnection from "./SignalingConnection";
 import PeerConnection from "./PeerConnection";
-
+import Logs from "./logs";
+import {browserrouter as Router, Route, Switch} from 'react-router-dom'
+global.a='';
 class demo extends React.Component {
     state = {
         startDisabled: true,
@@ -13,7 +15,8 @@ class demo extends React.Component {
         localStream: null,
         clientID: new Date().getTime() % 1000,
         username: faker.internet.userName(),
-        userList: []
+        userList: [],
+        logs:[],
     };
 
     localVideoRef = React.createRef();
@@ -45,6 +48,75 @@ class demo extends React.Component {
                 }),
             onMessage: this.onSignalingMessage
         });
+        // fetch('http://127.0.0.1:4000')
+        // .then(function(response) {
+        //   if (!response.ok) {
+        //     throw Error(response.statusText);
+        //   }
+        //   // Read the response as json.
+        //   console.log(response);
+        // //   return response.json();
+        // }).then(function(response){
+        //     this.setState({
+        //         logs: response
+        //         })}
+        // )
+        // .then(function(responseAsJson) {
+        //   // Do stuff with the JSON
+        //   console.log(responseAsJson);
+        // })
+        // .catch(function(error) {
+        //   console.log('Looks like there was a problem: \n', error);
+        // });
+        // fetch('http://127.0.0.1:4000')
+        // .then((response)=> {
+        //   if (!response.ok) {
+        //     throw Error(response.statusText);
+        //   }
+        //   // Read the response as json.
+        // //   return response.json();
+        //     console.log(response);
+        //     this.setState({
+        //         logs: response.text()
+        //         })}
+        // )
+        // .catch((error) =>{
+        //   console.log('Looks like there was a problem: \n', error);
+        // });
+        window.setInterval(function(){
+            fetch('http://127.0.0.1:4000',{method:"get"} ).then((function(response) 
+            {
+                response.text().then(function(text)      
+                {
+                    document.querySelector("#klog").innerHTML=text}
+                );
+        })
+        );
+        }, 2000);
+
+
+//         fetch('http://127.0.0.1:4000',{method:"get"} ).then((function(response) 
+//     {
+//         response.text().then(function(text)      
+//         {
+//             document.querySelector("#klog").innerHTML=text}
+//         );
+// })
+// );
+    //    fetch('http://127.0.0.1:4000',{method:"get"} )
+    //    .then(
+    //      (res) => {
+    //        this.setState({
+    //          logs: res
+    //        });
+    //      },
+    //      (err) => {
+    //        this.setState({
+    //          logs: JSON.stringify(err)
+    //        });
+    //      }
+    //    );
+
     }
 
     onSignalingMessage = msg => {
@@ -191,8 +263,11 @@ class demo extends React.Component {
             <div className="card">
                 <div className="card-header">
                     Demonstration
-        </div>
+                </div>
                 <div className="card-body">
+                    <div className="logs" id="klog">
+                       Here are the logs 
+                    </div>
                     <div className="container-fluid center">
                         <div>
                             <div>
