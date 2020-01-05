@@ -112,7 +112,7 @@ config:
 # Records, feel free to edit them
 records:
   - delay: 6310
-    content: "\e[?1034hHost:/WebRTC/Front Host $ "
+    content: "\e[?1034hHost:/Users/Host/WebRTC/Front Host $ "
   - delay: 795
     content: 'n'
   - delay: 170
@@ -134,6 +134,28 @@ records:
   - delay: 282
     content: "\r\n"
   - delay: 458
-    content: "\r\n> front@0.1.0 start /WebRTC/Front\r\n> react-scripts start\r\n\r\n"
-  - delay: 500
-    content: "\e[34mℹ\e[39m \e[90m｢wds｣\e[39m: Project is running at http://192.168.0.16/\r\n\e[34mℹ\e[39m \e[90m｢wds｣\e[39m: webpack output is served from /\r\n\e[34mℹ\e[39m \e[90m｢wds｣\e[39m: Content not from webpack is served from /Users/Nathauy/Desktop/WebRTC/Front/public\r\n\e[34mℹ\e[39m \e[90m｢wds｣\e[39m: 404s will fallback to /index.html\r\n\e[2J\e[3J\e[H\e[36mStarting the development server...\e[39m\r\n\e[36m\e[39m\r\n"
+    content: "\r\n> front@0.1.0 start /Users/Host/Front\r\n> react-scripts start\r\n\r\n"
+  - delay: 700
+    content: "\e[34mℹ\e[39m \e[90m｢wds｣\e[39m: Project is running at http://192.168.0.16/\r\n"
+  - delay: 700
+    content: "\e[34mℹ\e[39m \e[90m｢wds｣\e[39m: webpack output is served from /\r\n"
+  - delay: 700
+    content: "\e[34mℹ\e[39m \e[90m｢wds｣\e[39m: Content not from webpack is served from /Users/Host/WebRTC/Front/public\r\n"
+  - delay: 700
+    content: "\e[34mℹ\e[39m \e[90m｢wds｣\e[39m: 404s will fallback to /index.html\r\n"
+  - delay: 900
+    content: "\e[2J\e[3J\e[H \e[36mStarting the development server...\e[39m\r\n\e[36m\e[39m\r\n"
+
+
+    
+
+
+   
+
+  
+
+    
+
+
+
+    
