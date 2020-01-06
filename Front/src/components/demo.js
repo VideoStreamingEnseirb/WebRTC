@@ -4,7 +4,8 @@ import faker from "faker";
 import SignalingConnection from "./SignalingConnection";
 import PeerConnection from "./PeerConnection";
 import Logs from "./logs";
-import {browserrouter as Router, Route, Switch} from 'react-router-dom'
+import ReactDOM from 'react-dom';
+import {BrowserRouter, Route} from 'react-router-dom'
 global.a='';
 class demo extends React.Component {
     state = {
@@ -266,6 +267,9 @@ class demo extends React.Component {
                 </div>
                 <div className="card-body">
                     <div className="logs" id="klog">
+                        <BrowserRouter>
+                            <Route path="logs" exact component={Logs}/>
+                        </BrowserRouter>
                        Here are the logs 
                     </div>
                     <div className="container-fluid center">
