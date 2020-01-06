@@ -3,6 +3,7 @@ import launch from '../GIF/LaunchFront.gif';
 import launchNgrok from '../GIF/LaunchNgrok.gif'
 import launchNgrokBack from '../GIF/LaunchNgrokBack.gif'
 import https from '../Images/ngrok3000.png'
+import attentionIcon from '../Images/attentionIcon.png'
 
 export class howto extends Component {
     render() {
@@ -11,8 +12,6 @@ export class howto extends Component {
         const steps = ['The steps are divided into three parts. First, it consists of installing the prerequisites then retrieving the project (Front & Back).']
 
         const frontIntro = ['After cloning the repo, go to the front folder WebRTC/Front : ']
-
-        const backIntro = ['After cloning the repo, go to the back folder WebRTC/Back : ']
 
         return (
             <div className="card">
@@ -80,6 +79,7 @@ export class howto extends Component {
                             <p className="code">$ git clone <a href="https://github.com/VideoStreamingEnseirb/WebRTC.git">https://github.com/VideoStreamingEnseirb/WebRTC.git</a></p>
 
                         </ul>
+                        <p className="ml-5"><img className="img-fluid" src={attentionIcon} style={{ "width": "1.3em" }}></img> The installation of the prerequisites should only be done by the computer which is going to act as the server and not by the two clients. The same goes for <strong>Back and Front deployment</strong>.</p>
                     </p>
 
                     <br />
@@ -167,7 +167,7 @@ export class howto extends Component {
 
                     {/* --------- 2. Allowing website --------- */}
                     <div style={{ "text-indent": "20px" }} className="pt-3">
-                        <h6><strong>2. HTTPS without certificate</strong></h6>
+                        <h6><strong><a name="exactline">2. HTTPS without certificate</a></strong></h6>
                     </div>
 
 
@@ -189,6 +189,46 @@ export class howto extends Component {
                     {/* --------- Demonstration --------- */}
                     <h5>Demonstration</h5>
                     <hr></hr>
+
+                    <div>
+                        <p className="card-text mr-2">
+                            <ul> Now that the server hosting the web page and the back has been configured, the two other clients can use the demo.
+                                {/* --------- Step 1 --------- */}
+                                <li className="mt-2 ml-5 mb-3"> <em></em> <strong> Step 1 : </strong> <span className="client1">Client1</span> launches the user interface by following the link provided by <em>Ngrok</em> in <a href="#exactline">Front deployment</a> part.</li>
+
+                                {/* --------- Step 2 --------- */}
+                                <li style={{ "text-indent": "50px" }}> <em></em> <strong> Step 2 : </strong>  <span className="client1">Client1</span> clicks on the button <button className="btn btn-dark btn-sm">Init Media</button></li>
+                                <div className="ml-5">
+                                    <p > After clicking on the button, you should see the flow of your camera display on the web page.</p>
+                                    <p> INSERT IMAGE</p>
+                                </div>
+
+                                <li className="mt-2 ml-5"> <em></em> <strong> Step 3 : </strong> <span className="client2">Client2</span> launches the user interface by following the same link as <span className="client1">Client1</span>.</li>
+                                <div className="ml-5">
+                                    <p > After launching the user interface, <span className="client2">Client2</span> should see <span className="client1">Client1</span> and vice-versa.</p>
+                                    <p> INSERT IMAGE</p>
+                                </div>
+
+
+                                <li style={{ "text-indent": "50px" }}> <em></em> <strong> Step 4 : </strong>  <span className="client2">Client2</span> clicks on the button <button className="btn btn-dark btn-sm">Init Media</button></li>
+                                <div className="ml-5">
+                                    <p > After clicking on the button, you should see the flow of your camera display on the web page.</p>
+                                    <p> INSERT IMAGE</p>
+                                </div>
+
+                                <li className="mt-2 ml-5"> <em></em> <strong> Step 5 : </strong> <span className="client1">Client1</span> clicks on the button <button className="btn btn-success btn-sm">Call</button> next to the name of <span className="client2">Client2.</span></li>
+                                <div className="ml-5">
+                                    <p > Now both client can see each other.</p>
+                                    <p> INSERT IMAGE</p>
+                                </div>
+
+
+
+                            </ul>
+                        </p>
+                    </div>
+
+
 
 
 

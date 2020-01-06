@@ -18,9 +18,17 @@
   background-color: #ECECEE;
   color: #313131;
   margin-left: 6em;
-  margin-right: 6em;
+  margin-right: 7em;
   font-family: "Lucida Console", Monaco, monospace;
   margin-top: 0.5em;
   text-indent: 20px;
   font-size: 0.8em;
+}
+
+.client1 {
+  color: #8250b1;
+}
+
+.client2 {
+  color: #50b170;
 }
