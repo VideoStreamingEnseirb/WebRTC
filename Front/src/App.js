@@ -5,6 +5,7 @@ import './App.css';
 import Presentation from './components/presentation';
 import Howto from './components/howto';
 import Demo from './components/demo';
+import Biblio from './components/biblio';
 function App() {
   return (
     <div className="container">
@@ -12,6 +13,7 @@ function App() {
         <Presentation/>
         <Demo/>
         <Howto/>
+        <Biblio/>
       </header>
     </div>
   );
