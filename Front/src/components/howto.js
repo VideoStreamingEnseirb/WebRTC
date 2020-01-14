@@ -37,6 +37,8 @@ export class howto extends Component {
                     </h5>
                     <hr></hr>
 
+                    <p className="ml-5"><img className="img-fluid" src={attentionIcon} style={{ "width": "1.3em" }}></img> The installation of the prerequisites should only be done by the computer which is going to act as the server and not by the two clients. The same goes for <strong>Back and Front deployment</strong>.</p>
+
                     {/* --------- 1. Prerequisites --------- */}
                     <div style={{ "text-indent": "20px" }}>
                         <h6><strong>1. Prerequisites</strong></h6>
@@ -79,7 +81,7 @@ export class howto extends Component {
                             <p className="code">$ git clone <a href="https://github.com/VideoStreamingEnseirb/WebRTC.git">https://github.com/VideoStreamingEnseirb/WebRTC.git</a></p>
 
                         </ul>
-                        <p className="ml-5"><img className="img-fluid" src={attentionIcon} style={{ "width": "1.3em" }}></img> The installation of the prerequisites should only be done by the computer which is going to act as the server and not by the two clients. The same goes for <strong>Back and Front deployment</strong>.</p>
+                        
                     </p>
 
                     <br />

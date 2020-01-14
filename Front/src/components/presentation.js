@@ -33,8 +33,8 @@ export class presentation extends Component {
                          and drop system to share files on websites, the development of real-time data sharing and bidirectional video flux lead
                          to the creation of a fast and almost real-time protocol.
                           Direct exchanges between navigators already existed thanks to the creation of different plugins like Adobe Flash or Microsoft Active X.
-                         Yet,these proprietary solutions weren’t standardized and thus, because of the diversity, not really useful.
-                         To overcome this lack of coherence Web RTC has been created by Justin Uberti and Peter Thatcher.
+                         Yet, these proprietary solutions weren’t standardized and thus, because of the diversity, not really useful.
+                         To overcome this lack of coherence WebRTC has been created by Justin Uberti and Peter Thatcher.
                               Souce code of Web RTC can be found in the following link : {"\n"}
                         <a href={"https://webrtc.googlesource.com/src"}>https://webrtc.googlesource.com/src </a>
                     </p>
@@ -47,7 +47,7 @@ export class presentation extends Component {
                         </h4>
                     <hr></hr>
 
-                    <p>EXPLANATION</p>
+                    <p> In WebRTC, 2 steps can be distinguished : the initiation phase and the peer communication phase. As the two phases are completely different, the protocol stack are not the same. Each phase and protocole stack will be described precisely in this part. </p>
 
 
                     <div class="row mb-3">

@@ -38,7 +38,7 @@ class demo extends React.Component {
 
     componentDidMount() {
         this.signalingConnection = new SignalingConnection({
-            socketURL: "943205a0.ngrok.io",
+            socketURL: "2e4b91e6.ngrok.io",
             onOpen: () =>
                 this.setState({
                     startDisabled: false
@@ -202,7 +202,7 @@ class demo extends React.Component {
                                     value={username}
                                     onChange={this.changeUsername}
                                 />
-                                <button className="btn btn-info btn-sm" onClick={this.setUsername}> Set Username </button>
+                                <button onClick={this.setUsername}> Set Username </button>
                             </div>
                             <video
                                 ref={this.localVideoRef}
@@ -223,10 +223,10 @@ class demo extends React.Component {
                                 }}
                             />
                             <div>
-                                <button className="btn btn-dark btn-sm" onClick={this.initMedia} disabled={startDisabled}>
+                                <button  onClick={this.initMedia} disabled={startDisabled}>
                                     Init Media
                     </button>
-                                <button className="btn btn-danger btn-sm" onClick={this.hangUp} disabled={hangUpDisabled}>
+                                <button  onClick={this.hangUp} disabled={hangUpDisabled}>
                                     Hang Up
                     </button>
                             </div>
@@ -240,7 +240,7 @@ class demo extends React.Component {
                                                 <button
                                                     onClick={() => this.call(user)}
                                                     disabled={callDisabled}
-                                                    className="btn btn-success btn-sm"
+                                                
                                                 >
                                                     Call
                                     </button>
