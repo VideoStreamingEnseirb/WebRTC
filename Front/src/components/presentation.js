@@ -47,7 +47,7 @@ export class presentation extends Component {
                         </h4>
                     <hr></hr>
 
-                    <p> In WebRTC, 2 steps can be distinguished : the initiation phase and the peer communication phase. As the two phases are completely different, the protocol stack are not the same. Each phase and protocole stack will be described precisely in this part. </p>
+                    <p> WebRTC involves two different entities : client and server. The server is here to initialize the connection between the two peers before they communicate with each other directly by sharing data, audio and even video stream.  Thus, two steps can be distinguished : the initiation phase and the peer communication phase. As the two phases are completely different, the protocol stack are not the same. Each phase and protocol stack will be described precisely in this part. </p>
 
 
                     <div class="row mb-3">
@@ -55,23 +55,31 @@ export class presentation extends Component {
                             <img className="img-fluid mx-auto d-block mt-4" src={InitiationPhase} alt="FrontLaunch" style={{ "width": "100%" }}></img>
                         </div>
                         <div class="col-md card">
-                        <img className="img-fluid mx-auto d-block mt-4" src={SignallingProtocolStack} alt="FrontLaunch" style={{ "width": "50%" }}></img>
+                            <img className="img-fluid mx-auto d-block mt-4" src={SignallingProtocolStack} alt="FrontLaunch" style={{ "width": "50%" }}></img>
                         </div>
                     </div>
 
-                    <p>EXPLANATION</p>
+                    <p>The first phase is called the initiation phase and it involves the two peers who want to communicate with each other and a Web Server. The web browser of both peers connects to the same server to download in their local context an application based on the WebRTC API. The server then supervises the exchanges for the connection of peer 1 and 2. Web sockets are used to keep the connexion open between peers. Then, through SDP (Session Description Protocole), the configuration of one peer is sent to the other to allow the second peer to send data with the right configuration.</p>
 
 
-                    <div class="row mb-5">
+                    <div class="row mb-3">
                         <div class="col-md card mr-2">
                             <img className="img-fluid mx-auto d-block mt-3" src={PeerCommunication} alt="FrontLaunch" style={{ "width": "100%" }}></img>
                         </div>
                         <div class="col-md card">
-                        <img className="img-fluid mx-auto d-block mt-3" src={MediaProtocolStack} alt="FrontLaunch" style={{ "width": "100%" }}></img>
+                            <img className="img-fluid mx-auto d-block mt-3" src={MediaProtocolStack} alt="FrontLaunch" style={{ "width": "100%" }}></img>
                         </div>
                     </div>
 
-                    <p>EXPLANATION</p>
+                    <p>Once the server requests are done and the connection is accepted, client 1 and client 2 establish a bidirectional communication where data will transit. WebRTC is basically an API that has three main services and is based on a Javascript API.  </p>
+                    <ul>The three services are the following ones :
+                            <li style={{ "text-indent": "50px" }}> <em> MediaStream </em>
+
+                        </li>
+                        <li style={{ "text-indent": "50px" }}> <em> RTCPeerConnection </em> which provides secure URL to your localhost server through any NAT or firewall</li>
+                        <li style={{ "text-indent": "50px" }}> <em> RTCDataChannel </em> which provides secure URL to your localhost server through any NAT or firewall</li>
+                    </ul>
+
 
 
                     <hr></hr>
@@ -150,22 +158,20 @@ export class presentation extends Component {
                         Existing projects and links
                                 <hr></hr>
                     </h4>
-
                     <div className="card">
 
-                      <div className="card-body">
-                        <p className="card-text text-justify ml-3 mr-3">
-                            In this section, are listed links to existing WebRTC projects and applications.
-                        </p>
-                        <ul>
-                            <li style={{ "text-indent": "50px" }}> The link to the official WebRTC page for explainations:  <br />  <a href="https://webrtc.org/start/"> https://webrtc.org/start/ </a></li>
-                            <li style={{ "text-indent": "50px" }}> This first page allow us to understant the WebRTC project in his globality: <br /><a href="https://en.wikipedia.org/wiki/WebRTC"> https://en.wikipedia.org/wiki/WebRTC </a>  </li>
-                            <li style={{ "text-indent": "50px" }}> This site was usefull to create our web application: <br />  <a href="https://codeutopia.net/blog/2016/02/08/using-webrtc-and-react-to-build-a-basic-chat-server/"> https://codeutopia.net/blog/2016/02/08/using-webrtc-and-react-to-build-a-basic-chat-server/ </a></li>
-                            <li style={{ "text-indent": "50px" }}> Usefull tips to implement WebRTC:  <br />  <a href="https://www.html5rocks.com/en/tutorials/webrtc/basics/"> https://www.html5rocks.com/en/tutorials/webrtc/basics/ </a></li>
-                        </ul>
-                      </div>
+                        <div className="card-body">
+                            <p className="card-text text-justify ml-3 mr-3">
+                                In this section, are listed links to existing WebRTC projects and applications.
+                             </p>
+                            <ul>
+                                <li style={{ "text-indent": "50px" }}> The link to the official WebRTC page for explainations:  <br />  <a href="https://webrtc.org/start/"> https://webrtc.org/start/ </a></li>
+                                <li style={{ "text-indent": "50px" }}> This first page allow us to understant the WebRTC project in his globality: <br /><a href="https://en.wikipedia.org/wiki/WebRTC"> https://en.wikipedia.org/wiki/WebRTC </a>  </li>
+                                <li style={{ "text-indent": "50px" }}> This site was usefull to create our web application: <br />  <a href="https://codeutopia.net/blog/2016/02/08/using-webrtc-and-react-to-build-a-basic-chat-server/"> https://codeutopia.net/blog/2016/02/08/using-webrtc-and-react-to-build-a-basic-chat-server/ </a></li>
+                                <li style={{ "text-indent": "50px" }}> Usefull tips to implement WebRTC:  <br />  <a href="https://www.html5rocks.com/en/tutorials/webrtc/basics/"> https://www.html5rocks.com/en/tutorials/webrtc/basics/ </a></li>
+                            </ul>
+                        </div>
                     </div>
-
 
 
 
