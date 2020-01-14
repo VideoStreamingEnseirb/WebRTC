@@ -147,11 +147,12 @@ export class howto extends Component {
 
                     <div>
                         {/* --------- Change link in demo.js--------- */}
-                        <p className="card-text mr-3 pl-5" >Open the file <strong>/path_to_repo/WebRTC/Front/src/component/demo.js</strong>, with visual studio code for instance </p>
-                        <p className="code">$ code /path_to_repo/WebRTC/Front/src/component/demo.js</p>
 
                         <p className="card-text mr-3 pl-5" > Go back to the terminal with ngrok and paste <strong>your ngrok link</strong>. For instance, in our case it is 4b131a57.ngrok.io. </p>
                         <img className="img-fluid mx-auto d-block mb-2" src={httpsBack} alt="FrontLaunch" style={{ "width": "80%" }}></img>
+                        
+                        <p className="card-text mr-3 pl-5" >Open the file <strong>/path_to_repo/WebRTC/Front/src/component/demo.js</strong>, with visual studio code for instance </p>
+                        <p className="code">$ code /path_to_repo/WebRTC/Front/src/component/demo.js</p>
 
                         <p className="card-text mr-3 pl-5" >Go to line 41 and change the <em>socketURL</em> with the link provided by ngrok which is <strong>4b131a57.ngrok.io</strong> in this case</p>
                         <p className="code"> socketURL: "4b131a57.ngrok.io"</p>
