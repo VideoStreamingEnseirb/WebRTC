@@ -1,0 +1,153 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Users/Nathauy/Desktop/WebRTC/Front
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 138
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 13
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 6384
+    content: "\e[?1034hHost:/path_to_ngrok/ Host$ "
+  - delay: 2737
+    content: .
+  - delay: 52
+    content: /
+  - delay: 287
+    content: 'n'
+  - delay: 248
+    content: g
+  - delay: 236
+    content: 'rok '
+  - delay: 878
+    content: h
+  - delay: 105
+    content: t
+  - delay: 127
+    content: t
+  - delay: 98
+    content: p
+  - delay: 403
+    content: ' '
+  - delay: 368
+    content: '3'
+  - delay: 224
+    content: '0'
+  - delay: 184
+    content: '0'
+  - delay: 112
+    content: '0'
+  - delay: 954
+    content: "\r\n"
+  - delay: 408
+    content: "\e[?1049h\e[?1h\e=\e[?25l\e[H\e[2J\e(B\e[m\e[38;5;6m\e[48;5;16m\e[1m\e[1;1Hngrok\e(B\e[m\e[38;5;16m\e[48;5;16m \e(B\e[m\e[38;5;7m\e[48;5;16mby\e(B\e[m\e[38;5;16m\e[48;5;16m \e(B\e[m\e[38;5;6m\e[48;5;16m\e[1m@inconshreveable\e(B\e[m\e[38;5;16m\e[48;5;16m                                                                                                 \e(B\e[m\e[38;5;7m\e[48;5;16m(Ctrl+C to quit)\e(B\e[m\e[38;5;16m\e[48;5;16m\e[2;1H                                                                                                                                          \e(B\e[m\e[38;5;6m\e[48;5;16m\e[3;1HSession Status                connecting\e(B\e[m\e[38;5;16m\e[48;5;16m                                                                                                  \e(B\e[m\e[38;5;7m\e[48;5;16m\e[4;1HVersion                       2.3.35\e(B\e[m\e[38;5;16m\e[48;5;16m                                                                                                      \e(B\e[m\e[38;5;7m\e[48;5;16m\e[5;1HRegion                        United States (us)\e(B\e[m\e[38;5;16m\e[48;5;16m                                                                                          \e(B\e[m\e[38;5;7m\e[48;5;16m\e[6;1HWeb Interface                 http://127.0.0.1:4040\e(B\e[m\e[38;5;16m\e[48;5;16m                                                                                       \e[7;1H                                                                                                                                          \e(B\e[m\e[38;5;7m\e[48;5;16m\e[8;1HConnections                   ttl     opn     rt1     rt5     p50     p90     \e(B\e[m\e[38;5;16m\e[48;5;16m                                                            \e(B\e[m\e[38;5;7m\e[48;5;16m\e[9;1H                              0       0       0.00    0.00    0.00    0.00    \e(B\e[m\e[38;5;16m\e[48;5;16m                                                            \e[10;1H                                                                                                                                          \e[11;1H                                                                                                                                          \e[12;1H                                                                                                                                          \e[13;1H                                                                                                                                          "
+  - delay: 687
+    content: "\e(B\e[m\e[38;5;2m\e[48;5;16m\e[3;1HSession Status                online\e(B\e[m\e[38;5;16m\e[48;5;16m    \e(B\e[m\e[38;5;7m\e[48;5;16m\e[4;1HS\e[4;3Hs\e[4;9HExpires\e[4;31H7 hours, 59 minutes\e[5;1HV\e[5;3Hrsion\e[5;31H2.3.35\e(B\e[m\e[38;5;16m\e[48;5;16m            \e(B\e[m\e[38;5;7m\e[48;5;16m\e[6;1HR\e[6;3Hgio\e[6;7H       \e[6;31HUnited States (us)\e(B\e[m\e[38;5;16m\e[48;5;16m   \e(B\e[m\e[38;5;7m\e[48;5;16m\e[7;1HWeb Interface                 http://127.0.0.1:4040\e[8;1HF\e[8;3Hrward\e[8;9Hng \e[8;31Hh\e[8;33Htps://bdac2d87.ngrok.io ->\e[8;60Hhtt\e[8;64H://localhost:3000\e(B\e[m\e[38;5;16m\e[48;5;16m\e[9;1H                                                                              \e(B\e[m\e[38;5;7m\e[48;5;16m\e[10;1HConnections                   ttl     opn     rt1     rt5     p50     p90     \e[11;1H                              0       0       0.00    0.00    0.00    0.00    "
+  - delay: 121
+    content: "\e[8;35H:/\e[8;38Hbdac2d87.ngrok.io -> ht\e[8;62Hp:/\e[8;66Hlocalhost:30\e(B\e[m\e[38;5;16m\e[48;5;16m\e[8;80H \e(B\e[m\e[38;5;7m\e[48;5;16m\e[9;1HForwarding                    https://bdac2d87.ngrok.io -> http://localhost:3000\e(B\e[m\e[38;5;16m\e[48;5;16m\e[10;1H                                                                              \e(B\e[m\e[38;5;7m\e[48;5;16m\e[11;1HConnections\e[11;31Httl\e[11;39Hopn\e[11;47Hrt1 \e[11;55Hrt5 \e[11;63Hp5\e[11;66H \e[11;71Hp9\e[11;74H \e[12;1H                              0       0       0.00    0.00    0.00    0.00    "
+  - delay: 8657
+    content: "\e[?12l\e[?25h\e(B\e[m\e[H\e[2J\e[?1049l\e[?1l\e>\e[?1006l\e[?1015l\e[?1002l\e[?1000l"
