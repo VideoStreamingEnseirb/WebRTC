@@ -3,7 +3,6 @@ import "webrtc-adapter";
 import faker from "faker";
 import SignalingConnection from "./SignalingConnection";
 import PeerConnection from "./PeerConnection";
-
 class demo extends React.Component {
     state = {
         startDisabled: true,
@@ -202,7 +201,7 @@ class demo extends React.Component {
                                     value={username}
                                     onChange={this.changeUsername}
                                 />
-                                <button onClick={this.setUsername}> Set Username </button>
+                                <button  onClick={this.setUsername}> Set Username </button>
                             </div>
                             <video
                                 ref={this.localVideoRef}
