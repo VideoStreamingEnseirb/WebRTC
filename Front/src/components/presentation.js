@@ -31,9 +31,9 @@ export class presentation extends Component {
                     <p className="card-text text-justify ml-3 mr-3">
                         With the creation of rich web pages, the development of animations and the apparition of new functionality like drag
                          and drop system to share files on websites, the development of <strong>real-time data</strong> sharing and bidirectional <strong>
-                         video flux </strong> lead
-                         to the creation of a fast and almost real-time protocol.
-                          Direct exchanges between navigators already existed thanks to the creation of different plugins like Adobe Flash or Microsoft Active X.
+                            video flux </strong> lead
+                    to the creation of a fast and almost real-time protocol.
+                     Direct exchanges between navigators already existed thanks to the creation of different plugins like Adobe Flash or Microsoft Active X.
                          Yet, these proprietary solutions weren’t <strong>standardized</strong> and thus, because of the diversity, not really useful.
                          To overcome this lack of coherence <strong>WebRTC</strong> has been created by Justin Uberti and Peter Thatcher.
                               Source code of Web RTC can be found in the following link : {"\n"}
@@ -49,6 +49,16 @@ export class presentation extends Component {
                     <hr></hr>
 
                     <p> <strong>WebRTC</strong> <em>(Web Real-Time Communication)</em> main purpose is to provide <strong>real-time communication</strong>, it is an API that has three main services and is based on a Javascript API. It involves two different entities : <em>real-time communication</em> and <em>server</em>. The server is here to initialize the connection between the two peers before they communicate with each other directly by sharing data, audio and even video stream. </p>
+
+                    <div className="card-text">
+                        <ul>The three services provided by WebRTC are the following ones :
+                            <li style={{ "text-indent": "50px" }} className="mb-2"> <em> MediaStream </em> : MediaStream contains MediaStreamTrack objects which can either be audio or video tracks. For instance, it is use for retrieving the live flow of a camera or even a stored media.</li>
+                            <li style={{ "text-indent": "50px" }} className="mb-2"> <em> RTCPeerConnection : </em> This interface is used to create a peer-to-peer connection directly between browser. For instance, it can be used to create a video conference with extremely low latency. </li>
+                            <li style={{ "text-indent": "50px" }} className="mb-2"> <em> RTCDataChannel : </em> This interface enable to create a channel between two peers/browsers but this time the data format can be chosen by the user. </li>
+                        </ul>
+
+                    </div>
+
                     <p>Thus, two steps can be distinguished : the <strong>initiation phase</strong> and the <strong>peer communication phase</strong>. As the two phases are completely different, the protocol stack are not the same. Each phase and protocol stack will be described precisely in this part. </p>
 
 
@@ -67,9 +77,9 @@ export class presentation extends Component {
                         <li style={{ "text-indent": "50px" }} className="mb-2"> Web server relays the request to Client 2 </li>
                         <li style={{ "text-indent": "50px" }} className="mb-2"> Client 2 send a connection request to Client 1 </li>
                         <li style={{ "text-indent": "50px" }} className="mb-2"> Web server relays the request to Client 2 </li>
-                        
+
                     </ul>
-                    <p>Web sockets are used to keep the connection open between peers. Then, through SDP (Session Description Protocole), the configuration of one peer is sent to the other to allow the second peer to send data with the right configuration.</p>
+                    <p>Web sockets are used to keep the connection open between peers. Then, through <strong>SDP </strong> <em>(Session Description Protocole)</em>, the configuration of one peer is sent to the other to allow the second peer to send data with the right configuration.</p>
                     <div class="row mb-3">
                         <div class="col-md card mr-2">
                             <img className="img-fluid mx-auto d-block mt-3" src={PeerCommunication} alt="FrontLaunch" style={{ "width": "100%" }}></img>
@@ -79,16 +89,10 @@ export class presentation extends Component {
                         </div>
                     </div>
 
-                    <p>Once the server requests are done and the connection is accepted, client 1 and client 2 establish a bidirectional communication where data will transit. WebRTC is basically an API that has three main services and is based on a Javascript API.  </p>
-                    <ul>The three services are the following ones :
-                            <li style={{ "text-indent": "50px" }} className="mb-2"> <em> MediaStream </em> : MediaStream contains MediaStreamTrack objects which can either be audio and video tracks. For instance, it is use for retrieving the live flow of a camera or even a stored media. 
+                    <p>Once the server requests are done and the connection is accepted, client 1 and client 2 establish a bidirectional communication where data will transit.</p>
 
-                        </li>
-                        <li style={{ "text-indent": "50px" }} className="mb-2"> <em> RTCPeerConnection : </em> This interface is used to create a peer-to-peer connection directly between browser. For instance, it can be used to create a video conference with extremely low latency. </li>
-                        <li style={{ "text-indent": "50px" }} className="mb-2"> <em> RTCDataChannel : </em> This interface enable to create a channel between two peers/browsers but this time the data format can be chosen by the user. </li>
-                    </ul>
 
-                    <p>Yet, in most use cases the two peers are not in the same network and are separated by NAT’s and even Firewalls. That is why WebRTC also has a set of tools that perpetuates the peer communication. Indeed, the three entities are now supported by two other servers that enable the peer to peer connection. </p> 
+                    <p>Yet, in most use cases the two peers are not in the same network and are separated by NAT’s and even Firewalls. That is why WebRTC also has a set of tools that perpetuates the peer communication. Indeed, the three entities are now supported by two other servers that enable the peer to peer connection. </p>
                     <ul>Specification of the two other servers :
                         <li style={{ "text-indent": "50px" }} className="mb-2"> <em> STUN (Session Traversal Utilities for NAT) </em> : STUN servers are used to associate public addresses of peers and port associated for the communication. Thus, clients can talk directly to each other. It also allows us to bypass router restrictions.
                         </li>
@@ -102,7 +106,7 @@ export class presentation extends Component {
 
                     <div class="row mb-5">
 
-                        
+
 
 
 
@@ -116,34 +120,34 @@ export class presentation extends Component {
                                     <li style={{ "text-indent": "5px" }}>
 
                                         Advantages:
-                                        
+
                                         <ul>
                                             <li>
-                                            Standardized protocol Using both peers to peer and server model
+                                                Standardized protocol using both peers to peer and server model
                                             </li>
                                         </ul>
 
                                     </li>
 
-                                    
+
 
                                     <li style={{ "text-indent": "5px" }}>
                                         Disadvantages:{"\n"}
                                         <ul>
                                             <li>
-                                            Security (js app, personal data) 
+                                                Security (js app, personal data)
                                             </li>
                                             <li>
-                                            Ip exposed
+                                                Ip exposed
                                             </li>
                                             <li>
-                                            Uses UDP protocol, no packet loss check
+                                                Uses UDP protocol, no packet loss check
                                             </li>
                                             <li>
-                                            Usage in companies can be difficult (udp and peer to peer, firewall and nat)
+                                                Usage in companies can be difficult (udp and peer to peer, firewall and nat)
                                             </li>
                                             <li>
-                                            No adaptive bitrate
+                                                No adaptive bitrate
                                             </li>
                                         </ul>
                                         {"\n"}
