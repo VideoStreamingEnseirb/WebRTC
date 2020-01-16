@@ -51,10 +51,11 @@ export class presentation extends Component {
                     <p> <strong>WebRTC</strong> <em>(Web Real-Time Communication)</em> main purpose is to provide <strong>real-time communication</strong>, it is an API that has three main services and is based on a Javascript API. It involves two different entities : <em>real-time communication</em> and <em>server</em>. The server is here to initialize the connection between the two peers before they communicate with each other directly by sharing data, audio and even video stream. </p>
 
                     <div className="card-text">
-                        <ul>The three services provided by WebRTC are the following ones :
-                            <li style={{ "text-indent": "50px" }} className="mb-2"> <em> MediaStream </em> : MediaStream contains MediaStreamTrack objects which can either be audio or video tracks. For instance, it is use for retrieving the live flow of a camera or even a stored media.</li>
-                            <li style={{ "text-indent": "50px" }} className="mb-2"> <em> RTCPeerConnection : </em> This interface is used to create a peer-to-peer connection directly between browser. For instance, it can be used to create a video conference with extremely low latency. </li>
-                            <li style={{ "text-indent": "50px" }} className="mb-2"> <em> RTCDataChannel : </em> This interface enable to create a channel between two peers/browsers but this time the data format can be chosen by the user. </li>
+                        <p>The three services provided by WebRTC are the following ones :</p>
+                        <ul>
+                            <li className="mb-2"> <strong> MediaStream </strong> : MediaStream contains MediaStreamTrack objects which can either be audio or video tracks. For instance, it is use for retrieving the live flow of a camera or even a stored media.</li>
+                            <li className="mb-2"> <strong> RTCPeerConnection : </strong> This interface is used to create a peer-to-peer connection directly between browser. For instance, it can be used to create a video conference with extremely low latency. </li>
+                            <li className="mb-2"> <strong> RTCDataChannel : </strong> This interface enable to create a channel between two peers/browsers but this time the data format can be chosen by the user. </li>
                         </ul>
 
                     </div>
@@ -72,11 +73,12 @@ export class presentation extends Component {
                     </div>
 
                     <p>The first phase is called the <strong>initiation phase</strong> and it involves the two peers who want to communicate with each other and a Web Server. The web browser of both peers connects to the same server to download in their local context an application based on the WebRTC API. The server then supervises the exchanges for the connection of peer 1 and 2.  </p>
-                    <ul> This part are broken down into four parts :
-                        <li style={{ "text-indent": "50px" }} className="mb-2"> Client 1 send a connection request to Client 2</li>
-                        <li style={{ "text-indent": "50px" }} className="mb-2"> Web server relays the request to Client 2 </li>
-                        <li style={{ "text-indent": "50px" }} className="mb-2"> Client 2 send a connection request to Client 1 </li>
-                        <li style={{ "text-indent": "50px" }} className="mb-2"> Web server relays the request to Client 2 </li>
+                    <p>This part are broken down into four parts :</p>
+                    <ul> 
+                        <li className="mb-2"> <span className="client1">Client 1</span> send a connection request to <span className="client2">Client 2</span></li>
+                        <li className="mb-2"> Web server relays the request to <span className="client2">Client 2</span> </li>
+                        <li className="mb-2"> <span className="client2">Client 2</span> send a connection request to <span className="client1">Client 1</span> </li>
+                        <li className="mb-2"> Web server relays the request to <span className="client2">Client 2</span></li>
 
                     </ul>
                     <p>Web sockets are used to keep the connection open between peers. Then, through <strong>SDP </strong> <em>(Session Description Protocole)</em>, the configuration of one peer is sent to the other to allow the second peer to send data with the right configuration.</p>
@@ -95,20 +97,18 @@ export class presentation extends Component {
                     <p>Yet, in most use cases the two peers are not in the same network and are separated by NAT’s and even Firewalls. That is why WebRTC also has a set of tools that perpetuates the peer communication. Indeed, the three entities are now supported by two other servers that enable the peer to peer connection. </p> 
                    <p> Specification of the two other servers :</p>
                     <ul>
-                        <li style={{ "text-indent": "0px" }} className="mb-2"> <em> STUN (Session Traversal Utilities for NAT) </em> : STUN servers are used to associate public addresses of peers and port associated for the communication. Thus, clients can talk directly to each other. It also allows us to bypass router restrictions.
+                        <li className="mb-2"> <strong> STUN </strong> <em> (Session Traversal Utilities for NAT) </em>   : STUN servers are used to associate public addresses of peers and port associated for the communication. Thus, clients can talk directly to each other. It also allows us to bypass router restrictions.
                         </li>
-                        <li style={{ "text-indent": "50px" }} className="mb-2"> <strong> TURN </strong> <em> (Traversal Using Relays around NAT) </em> : TURN servers are needed during the data transfer to allow recovering connection between peers in case of loss of the initial connection.
+                        <li className="mb-2"> <strong> TURN </strong> <em> (Traversal Using Relays around NAT) </em> : TURN servers are needed during the data transfer to allow recovering connection between peers in case of loss of the initial connection.
                         </li>
                     </ul>
-                    <p>This protocol also deal with security  and disponibility concerns, as show in the media protocol stack figure,
-                        it uses multiple protocol for this purpose:
+                    <p className="mb-2">WebRTC also deals with security and disponibility concerns, as show in the media protocol stack figure, it uses multiple protocol for this purpose:
                         <ul>
-                            <li>DTLS  : Datagram Transport Layer Security is used to encrypt the data between the peers which is mandatory for WebRTC</li>
-                            <li>SRTP : This protocol adds encoding and authentication to restrict attacks by DOS, it encrypts the media stream too.
-
+                            <li className="mb-2"> <strong> DTLS</strong> <em>(Datagram Transport Layer Security) </em>: This protocol is used to encrypt the data between the peers which is mandatory for WebRTC</li>
+                            <li className="mb-2"> <strong> SRTP </strong> <em>(Secure Real-time Transport Protocol) </em>  : This protocol adds encoding and authentication to restrict attacks by DOS, it encrypts the media stream too.
                             </li>
-                            <li>
-                                STCP : Used for congestion control and support for multiple channels and streams
+                            <li className="mb-2">
+                                <strong>SCTP </strong> <em>(Stream Control Transmission Protocol)</em>  : Used for congestion control and support for multiple channels and streams
                             </li>
                         </ul>
                     </p>
@@ -130,9 +130,9 @@ export class presentation extends Component {
                             </h5>
                             <p className="card-text text-justify ml-3 mr-3">
                                 <ul>
-                                    <li style={{ "text-indent": "5px" }}>
+                                    <li style={{ "text-indent": "5px" }} className="mb-2">
 
-                                        Advantages:
+                                        <strong>Advantages</strong>:
 
                                         <ul>
                                             <li>
@@ -145,7 +145,7 @@ export class presentation extends Component {
 
 
                                     <li style={{ "text-indent": "5px" }}>
-                                        Disadvantages:{"\n"}
+                                        <strong>Disadvantages: </strong>{"\n"}
                                         <ul>
                                             <li>
                                                 Security (js app, personal data)
