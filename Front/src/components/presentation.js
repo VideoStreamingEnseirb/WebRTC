@@ -48,7 +48,8 @@ export class presentation extends Component {
                         </h4>
                     <hr></hr>
 
-                    <p> WebRTC involves two different entities : client and server. The server is here to initialize the connection between the two peers before they communicate with each other directly by sharing data, audio and even video stream.  Thus, two steps can be distinguished : the initiation phase and the peer communication phase. As the two phases are completely different, the protocol stack are not the same. Each phase and protocol stack will be described precisely in this part. </p>
+                    <p> <strong>WebRTC</strong> <em>(Web Real-Time Communication)</em> main purpose is to provide <strong>real-time communication</strong>, it is an API that has three main services and is based on a Javascript API. It involves two different entities : <em>real-time communication</em> and <em>server</em>. The server is here to initialize the connection between the two peers before they communicate with each other directly by sharing data, audio and even video stream. </p>
+                    <p>Thus, two steps can be distinguished : the <strong>initiation phase</strong> and the <strong>peer communication phase</strong>. As the two phases are completely different, the protocol stack are not the same. Each phase and protocol stack will be described precisely in this part. </p>
 
 
                     <div class="row mb-3">
@@ -60,9 +61,15 @@ export class presentation extends Component {
                         </div>
                     </div>
 
-                    <p>The first phase is called the initiation phase and it involves the two peers who want to communicate with each other and a Web Server. The web browser of both peers connects to the same server to download in their local context an application based on the WebRTC API. The server then supervises the exchanges for the connection of peer 1 and 2. Web sockets are used to keep the connexion open between peers. Then, through SDP (Session Description Protocole), the configuration of one peer is sent to the other to allow the second peer to send data with the right configuration.</p>
-
-
+                    <p>The first phase is called the <strong>initiation phase</strong> and it involves the two peers who want to communicate with each other and a Web Server. The web browser of both peers connects to the same server to download in their local context an application based on the WebRTC API. The server then supervises the exchanges for the connection of peer 1 and 2.  </p>
+                    <ul> This part are broken down into four parts :
+                        <li style={{ "text-indent": "50px" }} className="mb-2"> Client 1 send a connection request to Client 2</li>
+                        <li style={{ "text-indent": "50px" }} className="mb-2"> Web server relays the request to Client 2 </li>
+                        <li style={{ "text-indent": "50px" }} className="mb-2"> Client 2 send a connection request to Client 1 </li>
+                        <li style={{ "text-indent": "50px" }} className="mb-2"> Web server relays the request to Client 2 </li>
+                        
+                    </ul>
+                    <p>Web sockets are used to keep the connexion open between peers. Then, through SDP (Session Description Protocole), the configuration of one peer is sent to the other to allow the second peer to send data with the right configuration.</p>
                     <div class="row mb-3">
                         <div class="col-md card mr-2">
                             <img className="img-fluid mx-auto d-block mt-3" src={PeerCommunication} alt="FrontLaunch" style={{ "width": "100%" }}></img>
