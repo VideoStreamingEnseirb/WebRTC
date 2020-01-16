@@ -92,13 +92,26 @@ export class presentation extends Component {
                     <p>Once the server requests are done and the connection is accepted, client 1 and client 2 establish a bidirectional communication where data will transit.</p>
 
 
-                    <p>Yet, in most use cases the two peers are not in the same network and are separated by NAT’s and even Firewalls. That is why WebRTC also has a set of tools that perpetuates the peer communication. Indeed, the three entities are now supported by two other servers that enable the peer to peer connection. </p>
-                    <ul>Specification of the two other servers :
-                        <li style={{ "text-indent": "50px" }} className="mb-2"> <strong> STUN </strong> <em> (Session Traversal Utilities for NAT) </em> : STUN servers are used to associate public addresses of peers and port associated for the communication. Thus, clients can talk directly to each other. It also allows us to bypass router restrictions.
+                    <p>Yet, in most use cases the two peers are not in the same network and are separated by NAT’s and even Firewalls. That is why WebRTC also has a set of tools that perpetuates the peer communication. Indeed, the three entities are now supported by two other servers that enable the peer to peer connection. </p> 
+                   <p> Specification of the two other servers :</p>
+                    <ul>
+                        <li style={{ "text-indent": "0px" }} className="mb-2"> <em> STUN (Session Traversal Utilities for NAT) </em> : STUN servers are used to associate public addresses of peers and port associated for the communication. Thus, clients can talk directly to each other. It also allows us to bypass router restrictions.
                         </li>
                         <li style={{ "text-indent": "50px" }} className="mb-2"> <strong> TURN </strong> <em> (Traversal Using Relays around NAT) </em> : TURN servers are needed during the data transfer to allow recovering connection between peers in case of loss of the initial connection.
                         </li>
                     </ul>
+                    <p>This protocol also deal with security  and disponibility concerns, as show in the media protocol stack figure,
+                        it uses multiple protocol for this purpose:
+                        <ul>
+                            <li>DTLS  : Datagram Transport Layer Security is used to encrypt the data between the peers which is mandatory for WebRTC</li>
+                            <li>SRTP : This protocol adds encoding and authentication to restrict attacks by DOS, it encrypts the media stream too.
+
+                            </li>
+                            <li>
+                                STCP : Used for congestion control and support for multiple channels and streams
+                            </li>
+                        </ul>
+                    </p>
 
 
                     <hr></hr>
@@ -150,11 +163,7 @@ export class presentation extends Component {
                                                 No adaptive bitrate
                                             </li>
                                         </ul>
-                                        {"\n"}
-                                        {"\n"}
-                                        {"\n"}
-                                        {"\n"}
-                                        {"\n"}
+                                
                                     </li>
                                 </ul>
                             </p>
