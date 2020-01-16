@@ -102,8 +102,8 @@ export class presentation extends Component {
                         <li className="mb-2"> <strong> TURN </strong> <em> (Traversal Using Relays around NAT) </em> : TURN servers are needed during the data transfer to allow recovering connection between peers in case of loss of the initial connection.
                         </li>
                     </ul>
-                    <p className="mb-2">WebRTC also deals with security and disponibility concerns, as show in the media protocol stack figure, it uses multiple protocol for this purpose:
-                        <ul>
+                    <p>WebRTC also deals with security and disponibility concerns, as show in the media protocol stack figure, it uses multiple protocol for this purpose:
+                        <ul className="mt-2">
                             <li className="mb-2"> <strong> DTLS</strong> <em>(Datagram Transport Layer Security) </em>: This protocol is used to encrypt the data between the peers which is mandatory for WebRTC</li>
                             <li className="mb-2"> <strong> SRTP </strong> <em>(Secure Real-time Transport Protocol) </em>  : This protocol adds encoding and authentication to restrict attacks by DOS, it encrypts the media stream too.
                             </li>
@@ -135,9 +135,9 @@ export class presentation extends Component {
                                         <strong>Advantages</strong>:
 
                                         <ul>
-                                            <li>
-                                                Standardized protocol using both peers to peer and server model
-                                            </li>
+                                            <li>Standardized protocol using both peers to peer and server model</li>
+                                            <li>Low latency for live video conference</li>
+
                                         </ul>
 
                                     </li>
