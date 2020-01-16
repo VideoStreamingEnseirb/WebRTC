@@ -203,7 +203,7 @@ export class presentation extends Component {
                             <ul>
                                 <li style={{ "text-indent": "50px" }}> Official webRTC website :  <br /> <a href="https://webrtc.org">https://webrtc.org</a></li>
                                 <li style={{ "text-indent": "50px" }}> This site contains a lot of webrtc app : <br /> <a href="https://www.webrtc-experiment.com">https://www.webrtc-experiment.com</a></li>
-                                <li style={{ "text-indent": "50px" }}> A cool webRTC app that allows you to record your video flux: <br /> <a href="https://www.webrtc-experiment.com/RecordRTC/">https://www.webrtc-experiment.com/RecordRTC/</a></li>
+                                <li style={{ "text-indent": "50px" }}> A cool webRTC app that allows you to record your video stream: <br /> <a href="https://www.webrtc-experiment.com/RecordRTC/">https://www.webrtc-experiment.com/RecordRTC/</a></li>
                                 <li style={{ "text-indent": "50px" }}> WebRTC source code : <br /> <a href="https://webrtc.googlesource.com/src">https://webrtc.googlesource.com/src</a></li>
                                 
                             </ul>
