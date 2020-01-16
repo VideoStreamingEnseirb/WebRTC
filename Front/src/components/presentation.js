@@ -30,12 +30,13 @@ export class presentation extends Component {
 
                     <p className="card-text text-justify ml-3 mr-3">
                         With the creation of rich web pages, the development of animations and the apparition of new functionality like drag
-                         and drop system to share files on websites, the development of real-time data sharing and bidirectional video flux lead
+                         and drop system to share files on websites, the development of <strong>real-time data</strong> sharing and bidirectional <strong>
+                         video flux </strong> lead
                          to the creation of a fast and almost real-time protocol.
                           Direct exchanges between navigators already existed thanks to the creation of different plugins like Adobe Flash or Microsoft Active X.
-                         Yet, these proprietary solutions weren’t standardized and thus, because of the diversity, not really useful.
-                         To overcome this lack of coherence WebRTC has been created by Justin Uberti and Peter Thatcher.
-                              Souce code of Web RTC can be found in the following link : {"\n"}
+                         Yet, these proprietary solutions weren’t <strong>standardized</strong> and thus, because of the diversity, not really useful.
+                         To overcome this lack of coherence <strong>WebRTC</strong> has been created by Justin Uberti and Peter Thatcher.
+                              Source code of Web RTC can be found in the following link : {"\n"}
                         <a href={"https://webrtc.googlesource.com/src"}>https://webrtc.googlesource.com/src </a>
                     </p>
                     <br />
