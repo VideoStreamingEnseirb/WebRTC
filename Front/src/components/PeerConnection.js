@@ -86,10 +86,13 @@ class PeerConnection {
     };
 
     handleSignalingStateChangeEvent = event => {
-        switch (this.peerConnection.signalingState) {
-            case "closed":
-                this.close();
+        if(this.peerConnection){
+            switch (this.peerConnection.signalingState) {
+                case "closed":
+                    this.close();
+            }
         }
+        
     };
 
     offerConnection = () => {
@@ -187,10 +190,13 @@ class PeerConnection {
     };
 
     close = () => {
-        this.peerConnection.close();
-        this.peerConnection = null;
+        if(this.peerConnection){
+            this.peerConnection.close();
+            this.peerConnection = null;
 
-        this.onClose();
+            this.onClose();
+        }
+        
     };
 }
 

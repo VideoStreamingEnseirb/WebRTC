@@ -138,7 +138,7 @@ class demo extends React.Component {
     };
 
     hangUp = () => {
-        console.log("YEEESSS");
+        //console.log("YEEESSS");
         this.signalingConnection.sendToServer({
             name: this.state.username,
             target: this.state.targetUsername,
