@@ -197,7 +197,7 @@ export class howto extends Component {
                     <div>
                         {/* --------- Steps to deploy the UI --------- */}
                         <p className="card-text mr-3 pl-5" >Go to the folder where you downloaded Ngrok and write the following command : </p>
-                        <p className="code">$ ./ngrok http 3000 </p>
+                        <p className="code">$ sudo ./ngrok http 3000 </p>
 
                         <p className="card-text mr-3 pl-5" >You should see the following lines prompted in your terminal : </p>
                         <img className="img-fluid mx-auto d-block" src={launchNgrok} alt="FrontLaunch" style={{ "width": "80%" }}></img>
