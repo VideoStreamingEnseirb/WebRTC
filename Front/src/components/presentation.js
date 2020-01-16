@@ -73,13 +73,20 @@ export class presentation extends Component {
 
                     <p>Once the server requests are done and the connection is accepted, client 1 and client 2 establish a bidirectional communication where data will transit. WebRTC is basically an API that has three main services and is based on a Javascript API.  </p>
                     <ul>The three services are the following ones :
-                            <li style={{ "text-indent": "50px" }}> <em> MediaStream </em>
+                            <li style={{ "text-indent": "50px" }} className="mb-2"> <em> MediaStream </em> : MediaStream contains MediaStreamTrack objects which can either be audio and video tracks. For instance, it is use for retrieving the live flow of a camera or even a stored media. 
 
                         </li>
-                        <li style={{ "text-indent": "50px" }}> <em> RTCPeerConnection </em> which provides secure URL to your localhost server through any NAT or firewall</li>
-                        <li style={{ "text-indent": "50px" }}> <em> RTCDataChannel </em> which provides secure URL to your localhost server through any NAT or firewall</li>
+                        <li style={{ "text-indent": "50px" }} className="mb-2"> <em> RTCPeerConnection : </em> This interface is used to create a peer-to-peer connection directly between browser. For instance, it can be used to create a video conference with extremely low latency. </li>
+                        <li style={{ "text-indent": "50px" }} className="mb-2"> <em> RTCDataChannel : </em> This interface enable to create a channel between two peers/browsers but this time the data format can be chosen by the user. </li>
                     </ul>
 
+                    <p>Yet, in most use cases the two peers are not in the same network and are separated by NAT’s and even Firewalls. That is why WebRTC also has a set of tools that perpetuates the peer communication. Indeed, the three entities are now supported by two other servers that enable the peer to peer connexion. </p> 
+                    <ul>Specification of the two other servers :
+                        <li style={{ "text-indent": "50px" }} className="mb-2"> <em> STUN (Session Traversal Utilities for NAT) </em> : STUN servers are used to associate public addresses of peers and port associated for the communication. Thus, clients can talk directly to each other. It also allows us to bypass router restrictions.
+                        </li>
+                        <li style={{ "text-indent": "50px" }} className="mb-2"> <em> TURN (Traversal Using Relays around NAT) </em> : TURN servers are needed during the data transfer to allow recovering connection between peers in case of loss of the initial connection.
+                        </li>
+                    </ul>
 
 
                     <hr></hr>
