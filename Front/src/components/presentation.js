@@ -16,7 +16,7 @@ export class presentation extends Component {
 
             <div className="card">
                 <div className="card-header">
-                    Home WebRTC
+                    WebRTC
                         </div>
 
                 <div className="card-body">
