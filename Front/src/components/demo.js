@@ -194,38 +194,55 @@ class demo extends React.Component {
                 <div className="card-body">
                     <div className="container-fluid center">
                         <div>
-                            <div>
+                            <div className="mb-3">
                                 Username:{" "}
                                 <input
                                     type="text"
                                     value={username}
                                     onChange={this.changeUsername}
                                 />
-                                <button  onClick={this.setUsername}> Set Username </button>
+                                <button className="btn btn-dark btn-sm ml-2" onClick={this.setUsername}> Set Username </button>
                             </div>
-                            <video
-                                ref={this.localVideoRef}
-                                autoPlay
-                                muted
-                                style={{
-                                    width: "240px",
-                                    height: "180px"
-                                }}
-                            />
-                            <video
-                                ref={this.remoteVideoRef}
-                                autoPlay
-                                muted
-                                style={{
-                                    width: "240px",
-                                    height: "180px"
-                                }}
-                            />
+
+
+                            <div className="row">
+
+                                <div className="col-sm">
+                                    <p>Local camera : </p>
+                                    <video
+                                        ref={this.localVideoRef}
+                                        autoPlay
+                                        style={{
+                                            width: "400px",
+                                            height: "300px"
+                                        }}
+                                    />
+
+                                </div>
+
+                                <div className="col-sm">
+                                    <p>Remote camera : </p>
+                                    <video
+                                        ref={this.remoteVideoRef}
+                                        autoPlay
+                                        style={{
+                                            width: "400px",
+                                            height: "300px"
+                                        }}
+                                    />
+                                </div>
+
+
+                            </div>
+
+
+
+
                             <div>
-                                <button  onClick={this.initMedia} disabled={startDisabled}>
+                                <button className="btn btn-dark btn-sm mr-2" onClick={this.initMedia} disabled={startDisabled}>
                                     Init Media
                     </button>
-                                <button  onClick={this.hangUp} disabled={hangUpDisabled}>
+                                <button className="btn btn-danger btn-sm" onClick={this.hangUp} disabled={hangUpDisabled}>
                                     Hang Up
                     </button>
                             </div>
@@ -236,10 +253,10 @@ class demo extends React.Component {
                                             {user}
                                             {"  "}
                                             {user !== username ? (
-                                                <button
+                                                <button className="btn btn-success btn-sm"
                                                     onClick={() => this.call(user)}
                                                     disabled={callDisabled}
-                                                
+
                                                 >
                                                     Call
                                     </button>
