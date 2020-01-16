@@ -205,6 +205,9 @@ export class presentation extends Component {
                                 <li style={{ "text-indent": "50px" }}> This first page allow us to understant the WebRTC project in his globality: <br /><a href="https://en.wikipedia.org/wiki/WebRTC"> https://en.wikipedia.org/wiki/WebRTC </a>  </li>
                                 <li style={{ "text-indent": "50px" }}> This site was usefull to create our web application: <br />  <a href="https://codeutopia.net/blog/2016/02/08/using-webrtc-and-react-to-build-a-basic-chat-server/"> https://codeutopia.net/blog/2016/02/08/using-webrtc-and-react-to-build-a-basic-chat-server/ </a></li>
                                 <li style={{ "text-indent": "50px" }}> Usefull tips to implement WebRTC:  <br />  <a href="https://www.html5rocks.com/en/tutorials/webrtc/basics/"> https://www.html5rocks.com/en/tutorials/webrtc/basics/ </a></li>
+                                <li style={{ "text-indent": "50px" }}> This site contains a lot of webrtc app : <br /> <a href="https://www.webrtc-experiment.com">https://www.webrtc-experiment.com</a></li>
+                                <li style={{ "text-indent": "50px" }}> A cool webRTC app that allows you to record yout video flux: <br /> <a href="https://www.webrtc-experiment.com/RecordRTC/">https://www.webrtc-experiment.com/RecordRTC/</a></li>
+                                <li style={{ "text-indent": "50px" }}> Official webRTC website :  <br /> <a href="https://webrtc.org">https://webrtc.org</a></li>
                             </ul>
                         </div>
                     </div>
