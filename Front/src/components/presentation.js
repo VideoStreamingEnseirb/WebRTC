@@ -69,7 +69,7 @@ export class presentation extends Component {
                         <li style={{ "text-indent": "50px" }} className="mb-2"> Web server relays the request to Client 2 </li>
                         
                     </ul>
-                    <p>Web sockets are used to keep the connexion open between peers. Then, through SDP (Session Description Protocole), the configuration of one peer is sent to the other to allow the second peer to send data with the right configuration.</p>
+                    <p>Web sockets are used to keep the connection open between peers. Then, through SDP (Session Description Protocole), the configuration of one peer is sent to the other to allow the second peer to send data with the right configuration.</p>
                     <div class="row mb-3">
                         <div class="col-md card mr-2">
                             <img className="img-fluid mx-auto d-block mt-3" src={PeerCommunication} alt="FrontLaunch" style={{ "width": "100%" }}></img>
@@ -88,7 +88,7 @@ export class presentation extends Component {
                         <li style={{ "text-indent": "50px" }} className="mb-2"> <em> RTCDataChannel : </em> This interface enable to create a channel between two peers/browsers but this time the data format can be chosen by the user. </li>
                     </ul>
 
-                    <p>Yet, in most use cases the two peers are not in the same network and are separated by NAT’s and even Firewalls. That is why WebRTC also has a set of tools that perpetuates the peer communication. Indeed, the three entities are now supported by two other servers that enable the peer to peer connexion. </p> 
+                    <p>Yet, in most use cases the two peers are not in the same network and are separated by NAT’s and even Firewalls. That is why WebRTC also has a set of tools that perpetuates the peer communication. Indeed, the three entities are now supported by two other servers that enable the peer to peer connection. </p> 
                     <ul>Specification of the two other servers :
                         <li style={{ "text-indent": "50px" }} className="mb-2"> <em> STUN (Session Traversal Utilities for NAT) </em> : STUN servers are used to associate public addresses of peers and port associated for the communication. Thus, clients can talk directly to each other. It also allows us to bypass router restrictions.
                         </li>
