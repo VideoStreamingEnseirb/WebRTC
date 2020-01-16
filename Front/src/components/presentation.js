@@ -138,6 +138,12 @@ export class presentation extends Component {
                                             <li>Standardized protocol using both peers to peer and server model</li>
                                             <li>Low latency for live video conference</li>
 
+                                            <li>
+                                                Standardized protocol using both peers to peer and server model
+                                            </li>
+                                            <li>
+                                                Code open source
+                                            </li>
                                         </ul>
 
                                     </li>
