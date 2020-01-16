@@ -94,9 +94,9 @@ export class presentation extends Component {
 
                     <p>Yet, in most use cases the two peers are not in the same network and are separated by NAT’s and even Firewalls. That is why WebRTC also has a set of tools that perpetuates the peer communication. Indeed, the three entities are now supported by two other servers that enable the peer to peer connection. </p>
                     <ul>Specification of the two other servers :
-                        <li style={{ "text-indent": "50px" }} className="mb-2"> <em> STUN (Session Traversal Utilities for NAT) </em> : STUN servers are used to associate public addresses of peers and port associated for the communication. Thus, clients can talk directly to each other. It also allows us to bypass router restrictions.
+                        <li style={{ "text-indent": "50px" }} className="mb-2"> <strong> STUN </strong> <em> (Session Traversal Utilities for NAT) </em> : STUN servers are used to associate public addresses of peers and port associated for the communication. Thus, clients can talk directly to each other. It also allows us to bypass router restrictions.
                         </li>
-                        <li style={{ "text-indent": "50px" }} className="mb-2"> <em> TURN (Traversal Using Relays around NAT) </em> : TURN servers are needed during the data transfer to allow recovering connection between peers in case of loss of the initial connection.
+                        <li style={{ "text-indent": "50px" }} className="mb-2"> <strong> TURN </strong> <em> (Traversal Using Relays around NAT) </em> : TURN servers are needed during the data transfer to allow recovering connection between peers in case of loss of the initial connection.
                         </li>
                     </ul>
 
