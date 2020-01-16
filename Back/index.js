@@ -46,13 +46,15 @@ var appendToMakeUnique = 1;
 
 var logs = "<br>";
 app.use(cors({credentials: true}));
+
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type', 'Access-Control-Allow-Origin', 'Origin');
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
   });
+
 app.listen(4000, function (req, res) {
     console.log('Example app listening on port 3000!')
 })
@@ -77,7 +79,7 @@ function log(text) {
     });
     console.log("[" + time.toLocaleTimeString() + "] " + text);
 
-    request('http://192.168.0.16:4000/', { json: true }, (err, res, body) => {
+    request('http://localhost:4000/', { json: true }, (err, res, body) => {
         if (err) { return console.log(err); }
     });
 
