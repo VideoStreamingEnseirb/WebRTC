@@ -94,19 +94,7 @@ export class presentation extends Component {
 
                     <div class="row mb-5">
 
-                        <div class="col-md">
-                            <h5 style={{ "text-align": "center" }}>
-                                Technical {"\n"} Specificities
-                                   <hr></hr>
-                            </h5>
-                            <p className="card-text text-justify ml-3 mr-3">
-                                WebRTC (Web Real-Time Communication) main purpose is to provide real-time communication,
-                                it is an API that has three main services and is based on a Javascript API. Indeed, it involved
-                                a minimum of three entities: two peers and one server. The server is here to initialize
-                                 the connection between the two peers before they communicate with each other directly by sharing data,
-                                 audio and even video stream.
-                               </p>
-                        </div>
+                        
 
 
 
@@ -117,24 +105,44 @@ export class presentation extends Component {
                             </h5>
                             <p className="card-text text-justify ml-3 mr-3">
                                 <ul>
-                                    <li style={{ "text-indent": "50px" }}>
+                                    <li style={{ "text-indent": "5px" }}>
 
-                                        Advantages:{"\n"}
-                                        Standardized protocol{"\n"}
-                                        Using both peers to peer and server model{"\n"}
+                                        Advantages:
+                                        
+                                        <ul>
+                                            <li>
+                                            Standardized protocol Using both peers to peer and server model
+                                            </li>
+                                        </ul>
 
                                     </li>
 
+                                    
 
-
-                                    <li style={{ "text-indent": "50px" }}>
+                                    <li style={{ "text-indent": "5px" }}>
                                         Disadvantages:{"\n"}
-
-                                        Security (js app, personal data){"\n"}
-                                        Ip exposed{"\n"}
-                                        Uses UDP protocol, no packet loss check{"\n"}
-                                        Usage in companies can be difficult (udp and peer to peer, firewall and nat){"\n"}
-                                        No adaptive bitrate{"\n"}
+                                        <ul>
+                                            <li>
+                                            Security (js app, personal data) 
+                                            </li>
+                                            <li>
+                                            Ip exposed
+                                            </li>
+                                            <li>
+                                            Uses UDP protocol, no packet loss check
+                                            </li>
+                                            <li>
+                                            Usage in companies can be difficult (udp and peer to peer, firewall and nat)
+                                            </li>
+                                            <li>
+                                            No adaptive bitrate
+                                            </li>
+                                        </ul>
+                                        {"\n"}
+                                        {"\n"}
+                                        {"\n"}
+                                        {"\n"}
+                                        {"\n"}
                                     </li>
                                 </ul>
                             </p>
