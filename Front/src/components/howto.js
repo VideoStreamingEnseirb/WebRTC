@@ -46,7 +46,7 @@ export class howto extends Component {
                     <p className="card-text text-justify ml-3 mr-3">
                         {introduction}
                     </p>
-                    <img className="img-fluid mx-auto d-block" src={Architecture} alt="FrontLaunch" style={{ "width": "50%" }}></img>
+                    <img className="img-fluid mx-auto d-block" src={Architecture} alt="FrontLaunch" style={{ "width": "60%" }}></img>
                     <br />
 
                     {/* --------- Getting started --------- */}
