@@ -12,6 +12,9 @@ import Step3 from '../Images/Step3.png'
 import Step4 from '../Images/Step4.png'
 
 
+import Architecture from '../Images/Architecture.png'
+
+
 export class howto extends Component {
     render() {
         const introduction = ['The purpose to this project is to create a web page dedicated to an overview of WebRTC functionnalities. This part will explain how to use and deploy the demonstration part and the project itself, so it can work with three entities : 2 clients and 1 server.'];
@@ -43,6 +46,7 @@ export class howto extends Component {
                     <p className="card-text text-justify ml-3 mr-3">
                         {introduction}
                     </p>
+                    <img className="img-fluid mx-auto d-block" src={Architecture} alt="FrontLaunch" style={{ "width": "50%" }}></img>
                     <br />
 
                     {/* --------- Getting started --------- */}
