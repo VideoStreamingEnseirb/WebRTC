@@ -118,7 +118,7 @@ Direct exchanges between navigators already existed thanks to the creation of di
                             </li>
                         </ul>
                     </p>
-                    <p>Moreover, in general UDP is used for peer-to-peer but sometimes it is not possible so TCP is used instead. </p>
+                    <p>Moreover, in general UDP is used for peer-to-peer but sometimes it is not possible so TCP is used instead. g</p>
 
 
                     <hr></hr>
