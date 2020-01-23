@@ -32,3 +32,9 @@
 .client2 {
   color: #50b170;
 }
+
+
+.figure {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 0.9em;
+}

@@ -55,7 +55,7 @@ export class howto extends Component {
                     </h5>
                     <hr></hr>
 
-                    <p className="ml-5"><img className="img-fluid" src={attentionIcon} style={{ "width": "1.3em" }}></img> The installation of the prerequisites should only be done by the computer which is going to act as the server and not by the two clients. The same goes for <strong>Back and Front deployment</strong>.</p>
+                    <p><img className="img-fluid" src={attentionIcon} style={{ "width": "1.3em" }}></img> The installation of the prerequisites should only be done by the computer which is going to act as the server and not by the two clients. The same goes for <strong>Back and Front deployment</strong>.</p>
 
                     {/* --------- 1. Prerequisites --------- */}
                     <div style={{ "text-indent": "20px" }}>
@@ -206,7 +206,7 @@ export class howto extends Component {
                         <p className="card-text mr-3 pl-5" >You should see the following lines prompted in your terminal : </p>
                         <img className="img-fluid mx-auto d-block" src={launchNgrok} alt="FrontLaunch" style={{ "width": "80%" }}></img>
 
-                        <p className="card-text mr-3 pl-5"> Afterwards, go to the link provided by ngrok in https, in our case <strong>https://bdac2d87.ngrok.io</strong> which is link to our localhost:3000. You should be able to retrieve the same site as the one in localhost:3000 but now the site is in https.</p>
+                        <p className="card-text mr-3 pl-5"> Afterwards, go to the link provided by <strong>your ngrok</strong> in https, in our case <strong>https://bdac2d87.ngrok.io</strong> which is link to our localhost:3000. You should be able to retrieve the same site as the one in localhost:3000 but now the site is in https.</p>
                         <img className="img-fluid mx-auto d-block" src={https} alt="FrontLaunch" style={{ "width": "80%" }}></img>
 
                     </div>
@@ -226,7 +226,7 @@ export class howto extends Component {
                                 {/* --------- Step 2 --------- */}
                                 <li style={{ "text-indent": "50px" }}> <em></em> <strong> Step 2 : </strong>  <span className="client1">Client1</span> clicks on the button <button className="btn btn-dark btn-sm">Init Media</button></li>
                                 <div className="ml-5">
-                                    <p > After clicking on the button, you should see the flow of your camera display on the web page.</p>
+                                    <p > After clicking on the button, you should see the flow of your camera displayed on the web page.</p>
                                     <img className="img-fluid mx-auto d-block" src={Step1} alt="FrontLaunch" style={{ "width": "40%" }}></img>
                                 </div>
 
@@ -247,6 +247,7 @@ export class howto extends Component {
                                 <div className="ml-5">
                                     <p > Now both client can see each other.</p>
                                     <img className="img-fluid mx-auto d-block" src={Step4} alt="FrontLaunch" style={{ "width": "40%" }}></img>
+                                    <p>In order to see all the logs of the interaction of the client and the server, you can consult <a href="http://localhost:3000/logs">localhost:3000/logs</a> (or if you don't host the server just add <strong>/logs</strong> to the user interface link).</p>
                                 </div>
 
 

@@ -37,7 +37,7 @@ class demo extends React.Component {
 
     componentDidMount() {
         this.signalingConnection = new SignalingConnection({
-            socketURL: "4cbb1c54.ngrok.io",
+            socketURL: "54b655cc.ngrok.io",
             onOpen: () =>
                 this.setState({
                     startDisabled: false
