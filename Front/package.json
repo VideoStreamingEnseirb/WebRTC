@@ -13,7 +13,7 @@
     "react-image-lightbox": "^5.1.1",
     "react-lightbox-component": "^1.2.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.3.0",
+    "react-scripts": "^5.0.1",
     "style-loader": "^1.1.2",
     "terminalizer": "^0.7.1",
     "webrtc-adapter": "^7.3.0"
